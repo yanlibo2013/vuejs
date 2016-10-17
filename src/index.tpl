@@ -6,6 +6,6 @@
     <title>vue</title>
   </head>
   <body>
-    <div id="app"></div>
+    <app></app>
   </body>
 </html>

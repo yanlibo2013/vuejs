@@ -133,7 +133,7 @@ module.exports = {
     },
     resolve: {
         // require时省略的扩展名，如：require('module') 不需要module.js
-        extension: ['', '.js'],
+        extension: ['', '.js','.vue','.css'],
         //别名
         alias: {
             filter: path.join(__dirname, 'src/filters')

@@ -4,6 +4,3 @@
     <router-view></router-view>
   </div>
 </template>
-<script>
-    import './assets/css/base.scss';
-</script>
