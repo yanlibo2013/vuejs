@@ -16,7 +16,6 @@
     import NotesList from '../components/NotesList.vue'
     import Editor from '../components/Editor.vue';
 
-
     export default {
         components: {
             Toolbar,
