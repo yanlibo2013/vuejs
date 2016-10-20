@@ -14,7 +14,7 @@
 <script>
     import Toolbar from '../components/Toolbar.vue'
     import NotesList from '../components/NotesList.vue'
-    import Editor from '../components/Editor.vue';
+    import Editor from '../components/Editor.vue'
 
     export default {
         components: {

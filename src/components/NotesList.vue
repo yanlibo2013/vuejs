@@ -2,7 +2,7 @@
   <div id="notes-list">
 
     <div id="list-header">
-      <h2>我的笔记1114242341</h2>
+      <h2>我的笔记</h2>
       <div class="btn-group btn-group-justified" role="group">
         <!-- All Notes button -->
         <div class="btn-group" role="group">
@@ -19,7 +19,6 @@
             :class="{active: show === 'favorites'}">
             Favorites
           </button>
-
         </div>
       </div>
     </div>
@@ -41,7 +40,7 @@
 </template>
 
 <script>
-import { updateActiveNote } from '../vuex/actions'
+import { updateActiveNote,addNote } from '../vuex/actions';
 
 export default {
   data () {
