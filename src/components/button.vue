@@ -10,6 +10,7 @@
     </div>
 </template>
 <style>
+
     .btn-default {
         background-color: red;
         width: 200px;

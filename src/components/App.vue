@@ -5,11 +5,9 @@
 * @Last Modified time: 2016-10-19 16:47:00
 */
 <template>
-  <div id="app">
-    <toolbar></toolbar>
-    <notes-list></notes-list>
-    <editor></editor>
-  </div>
+  <toolbar></toolbar>
+  <notes-list></notes-list>
+  <editor></editor>
 </template>
 
 <script>
@@ -25,7 +23,3 @@ export default {
   }
 }
 </script>
-<style lang="sass">
-  @import '../../node_modules/bootstrap/dist/css/bootstrap.css';
-  @import "../assets/css/style.scss";
-</style>

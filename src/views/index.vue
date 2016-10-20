@@ -10,6 +10,7 @@
         <notes-list></notes-list>
         <editor></editor>
     </div>
+
 </template>
 <style>
   .div-app{
