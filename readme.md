@@ -1,4 +1,4 @@
-<a href=""></a>##webpack+vuejs实现一个中大型单页移动应用
+<a href=""></a>##webpack+vuejs+vuex实现一个中大型单页移动应用
 #### 项目特点
 - 热加载/热替换（hotreload)
 - 构建时文件带hash，方便版本控制
