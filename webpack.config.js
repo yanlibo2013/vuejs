@@ -41,38 +41,25 @@ var production = process.env.PRODUCTION;
 
 //webpack插件
 var plugins = [
-    //将样式统一发布到style.css中
     new ExtractTextPlugin(production ? "style.css?[chunkhash]" : "style.css", {
         allChunks: true,
         disable: false
     }),
-    //提公用js到common.js文件中
     new webpack.optimize.CommonsChunkPlugin(production ? "vendor.js?[chunkhash]" : "vendor.js"),
     function () {
         return this.plugin('done', function (stats) {
             var content;
-            //这里可以拿到hash值   参考：http://webpack.github.io/docs/long-term-caching.html
             content = JSON.stringify(stats.toJson().assetsByChunkName, null, 2);
             console.log('版本是：' + JSON.stringify(stats.toJson().hash));
-            //return fs.writeFileSync('build/assets.json', content);
         });
     },
 ];
 
-/*
- 版本控制
- package.json中的
- "html-webpack-plugin": "^1.6.2",
- 模块是把生成的带有md5戳的文件，插入到index.html中。
- 通过index.tpl模板，生成 index.html
- */
 var HtmlWebpackPlugin = require("html-webpack-plugin");
-//HtmlWebpackPlugin文档 https://www.npmjs.com/package/html-webpack-plugin
-//https://github.com/ampedandwired/html-webpack-plugin/issues/52
 plugins.push(new HtmlWebpackPlugin({
-    filename: '../index.html',//会生成index.html在根目录下,并注入脚本
+    filename: '../index.html',
     template: './src/index.tpl',
-    inject: true //此参数必须加上，不加不注入
+    inject: true
 }));
 
 
@@ -81,7 +68,6 @@ var entry = ['./src/main'],
     buildPath = "/build/",
     publishPath = production ? cdnPrefix + buildPath : buildPath;
 
-//编译输出路径
 module.exports = {
     debug: true,
     entry: entry,
@@ -132,9 +118,7 @@ module.exports = {
         plugins: ['transform-runtime']
     },
     resolve: {
-        // require时省略的扩展名，如：require('module') 不需要module.js
         extension: ['', '.js','.vue','.css'],
-        //别名
         alias: {
             filter: path.join(__dirname, 'src/filters')
         }
