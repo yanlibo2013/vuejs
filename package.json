@@ -1,5 +1,5 @@
 {
-  "name": "vue-app-generateor",
+  "name": "vue-vuex-app",
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
@@ -45,11 +45,7 @@
   "scripts": {
     "mb": "export PRODUCTION=1 && webpack --progress --hide-modules",
     "wb": "set PRODUCTION=1 && webpack --progress --colors --hide-modules",
-    "dev": "node server.js",
-    "port": "webpack-dev-server --progress --colors --inline --port 9090 ",
-    "hot": "webpack-dev-server --progress --colors --inline --hot",
-    "cp": "cp -r index.html d:/VMShare/mainsite_vue/templates/wap",
-    "ip": "webpack-dev-server  --progress --colors --hot --host=0.0.0.0  --port 9000"
+    "dev": "node server.js"
   },
   "author": "henry yan",
   "license": "ISC"
