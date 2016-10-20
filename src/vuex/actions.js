@@ -1,4 +1,9 @@
-
+/*
+ * @Author: henry yan
+ * @Date:   2016-10-19 16:47:00
+ * @Last Modified by:   henry yan
+ * @Last Modified time: 2016-10-19 16:47:00
+ */
 import * as types from './types'
 export const addNote = ({dispatch}) => {
   dispatch(types.ADD_NOTE)

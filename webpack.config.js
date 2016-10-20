@@ -1,3 +1,9 @@
+/*
+ * @Author: henry yan
+ * @Date:   2016-10-19 16:47:00
+ * @Last Modified by:   henry yan
+ * @Last Modified time: 2016-10-19 16:47:00
+ */
 //先清空 build 文件夹下的文件
 var fs = require('fs'),
     buildPath = './build';
