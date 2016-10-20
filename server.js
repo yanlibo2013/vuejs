@@ -11,13 +11,9 @@ new WebpackDevServer(webpack(config), {
     publicPath: config.output.publicPath,
     hot:true,
     historyApiFallback: true,
-    stats: { colors: true},  //打包输出时带颜色
+    stats: { colors: true},
     proxy: {
         '/api/*': {
-            target: 'http://localhost:3001',
-            secure: false
-        },
-        '/qm/*': {
             target: 'http://localhost:3001',
             secure: false
         }
