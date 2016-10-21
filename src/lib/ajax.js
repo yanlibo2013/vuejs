@@ -15,19 +15,20 @@ export default function(opt){
     let call_succ = opt.success;
     let call_error=opt.error;
     opt.method = opt.type || 'post';
-    opt.type = opt.dataType || 'json';
+    //opt.type = opt.dataType || 'json';
     opt = {
         cache: 'false',
         ...opt
     };
     //不简写
-    this.$http(opt).then((response) => {
+    Vue.http(opt).then((response) => {
         // 响应成功回调
         call_succ && call_succ.call(this, response);
     }, (response) => {
         // 响应错误回调
         call_error && call_error.call(this, response);
     });
+
 
 
     /* this.$http({

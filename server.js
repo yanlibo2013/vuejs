@@ -25,13 +25,6 @@ var config = require('./webpack.config.js');
 config.entry.unshift('webpack-dev-server/client?http://localhost:4000', "webpack/hot/dev-server");
 config.plugins.push(new webpack.HotModuleReplacementPlugin());
 
-// 这里配置：请求http://localhost:8080/api，
-// 相当于通过本地node服务代理请求后台服务器了http://cn.vuejs.org/api
-var proxy = [{
-    path: '/qm/*',
-    target: 'http://localhost:3001',
-    secure: false
-}]
 //启动服务
 new WebpackDevServer(webpack(config), {
     publicPath: config.output.publicPath,

@@ -4,9 +4,24 @@
  * @Last Modified by:   henry yan
  * @Last Modified time: 2016-10-19 16:47:00
  */
+import  ajax from '../lib/ajax';
 import * as types from './types'
 export const addNote = ({dispatch}) => {
-  dispatch(types.ADD_NOTE)
+  dispatch(types.ADD_NOTE);
+  ajax({
+    type:'get',
+    url: '/qm/api/banner/list',
+    success: (result)=>{
+      console.log("success");
+      console.log(result);
+
+    },
+    error:(result)=>{
+      console.log("error");
+      console.log(result);
+    }
+  })
+
 }
 
 export const editNote = ({ dispatch }, e) => {
