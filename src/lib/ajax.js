@@ -29,22 +29,4 @@ export default function(opt){
         call_error && call_error.call(this, response);
     });
 
-
-
-    /* this.$http({
-         method:'GET',
-         url:'http://192.168.30.235:9999/rest/knowledge/list',
-         data:{'websiteId':2,'pageSize':20,'pageNo':1,'isTop':0},
-         headers: {"X-Requested-With": "XMLHttpRequest"},
-         emulateJSON: true
-     }).then(function(data){//es5写法
-         return{
-             toplist:data[0].data.knowledgeList,
-             alllist:data[1].data.knowledgeList
-         }
-         //es6写法 .then()部分
-         //.then(([toplist,alllist])=>({toplist,alllist}))
-     },function(error){
-         //error
-     })*/
 }
