@@ -9,15 +9,8 @@ import * as types from './types'
 export const addNote = ({dispatch}) => {
   dispatch(types.ADD_NOTE);
   ajax({
-    type:'get',
     url: '/qm/api/banner/list',
     success: (result)=>{
-      console.log("success");
-      console.log(result);
-
-    },
-    error:(result)=>{
-      console.log("error");
       console.log(result);
     }
   })
