@@ -6,8 +6,6 @@
 - CSS 样式独立文件
 - 支持ES6
 - 支持sass
-- 解决了数据请求跨域问题
-
 
 #### 环境部署
 1. 安装nodejs（版本6.2+）
@@ -15,11 +13,7 @@
 2. 全局安装webpack
 ```
 npm install webpack -g
-```
-3. 拷贝本项目
-```
-git clone git@github.com:tianyuwu/Vue-SPA-demo.git
-```
+
 4. 安装项目依赖
 进行项目根目录,执行下面命令
 ```

@@ -5,7 +5,7 @@
 var http = require("http");
 var Api = require("./server_api_define.js").Api;
 
-var api_root_dir = __dirname + "../fufang_api";;
+var api_root_dir = __dirname + "/../api";;
 console.log("root_dir : " + api_root_dir)
 
 var api = new Api();
